@@ -18,7 +18,7 @@ body {
 
 #snake-game {
   background: #6ab04c;
-  margin-top: 45%;
+  margin-top: 35%;
   transform: translateY(-50%);
   border: 20px solid black;
 
@@ -29,7 +29,7 @@ body {
   width: 640px;
   height: 640px;
   left: 50%;
-  margin-top: 45%;
+  margin-top: 35%;
   transform: translate(-50%, -50%);
   background: #000;
   z-index: 999;
@@ -40,7 +40,7 @@ body {
   width: 640px;
   height: 640px;
   left: 50%;
-  margin-top: 45%;
+  margin-top: 35%;
   transform: translate(-50%, -50%);
   background: #6ab04c;
   z-index: 999;
