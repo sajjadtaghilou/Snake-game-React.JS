@@ -5,6 +5,7 @@ body {
   overflow: hidden;
   padding: 0;
   margin: 0px;
+  zoom: 80%;
 }
 
 .App {
@@ -17,7 +18,7 @@ body {
 
 #snake-game {
   background: #6ab04c;
-  margin-top: 25%;
+  margin-top: 45%;
   transform: translateY(-50%);
   border: 20px solid black;
 
@@ -28,7 +29,7 @@ body {
   width: 640px;
   height: 640px;
   left: 50%;
-  margin-top: 25%;
+  margin-top: 45%;
   transform: translate(-50%, -50%);
   background: #000;
   z-index: 999;
@@ -39,7 +40,7 @@ body {
   width: 640px;
   height: 640px;
   left: 50%;
-  margin-top: 25%;
+  margin-top: 45%;
   transform: translate(-50%, -50%);
   background: #6ab04c;
   z-index: 999;
