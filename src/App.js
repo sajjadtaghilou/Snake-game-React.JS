@@ -29,8 +29,8 @@ class App extends Component {
         // create the food
 
         let food = {
-            x: Math.floor(Math.random() * 17 + 1) * box,
-            y: Math.floor(Math.random() * 15 + 3) * box
+            x: Math.floor(Math.random() * 12 + 1) * box,
+            y: Math.floor(Math.random() * 10 + 3) * box
         };
 
         // create the score var
@@ -67,7 +67,7 @@ class App extends Component {
 
         const draw = () => {
             ctx.fillStyle = "#6ab04c";
-            ctx.fillRect(0, 0, 640, 640);
+            ctx.fillRect(0, 0, 480, 480);
             for (let i = 0; i < snake.length; i++) {
                 ctx.fillStyle = i === 0 ? "#000" : "#000";
                 ctx.fillRect(snake[i].x, snake[i].y, box, box);
@@ -94,8 +94,8 @@ class App extends Component {
                 score++;
                 this.setState({ score });
                 food = {
-                    x: Math.floor(Math.random() * 17 + 1) * box,
-                    y: Math.floor(Math.random() * 15 + 3) * box
+                    x: Math.floor(Math.random() * 12 + 1) * box,
+                    y: Math.floor(Math.random() * 10 + 3) * box
                 };
                 // we don't remove the tail
             } else {
@@ -114,9 +114,9 @@ class App extends Component {
 
             if (
                 snakeX < box - 32 ||
-                snakeX > 20 * box - 32 ||
+                snakeX > 15 * box - 32 ||
                 snakeY < box - 32 ||
-                snakeY > 20 * box - 32 ||
+                snakeY > 15 * box - 32 ||
                 collision(newHead, snake)
             ) {
                 this.setState({ collided: true, interval: false });
@@ -149,7 +149,7 @@ class App extends Component {
                         </button>
                     </div>
                 ) : null}
-                <canvas id="snake-game" ref="canvas" width={640} height={640} />
+                <canvas id="snake-game" ref="canvas" width={480} height={480} />
             </div>
             
         );

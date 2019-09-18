@@ -5,13 +5,12 @@ body {
   overflow: hidden;
   padding: 0;
   margin: 0px;
-  zoom: 80%;
 }
 
 .App {
   text-align: center;
   width: 100%;
-  height: 0%;
+  height:80%;
   background: #2f3542;
 
 }
@@ -26,8 +25,8 @@ body {
 
 .menu {
   position: fixed;
-  width: 640px;
-  height: 640px;
+  width: 480px;
+  height: 480px;
   left: 50%;
   margin-top: 25%;
   transform: translate(-50%, -50%);
@@ -37,8 +36,8 @@ body {
 
 .overlay {
   position: fixed;
-  width: 640px;
-  height: 640px;
+  width: 480x;
+  height: 480px;
   left: 50%;
   margin-top: 35%;
   transform: translate(-50%, -50%);
