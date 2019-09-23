@@ -43,13 +43,13 @@ class App extends Component {
 
         const direction = event => {
             let key = event.keyCode;
-            if (key === 37 && d !== "RIGHT") {
+            if (key === 37) {
                 d = "LEFT";
-            } else if (key === 38 && d !== "DOWN") {
+            } else if (key === 38) {
                 d = "UP";
-            } else if (key === 39 && d !== "LEFT") {
+            } else if (key === 39) {
                 d = "RIGHT";
-            } else if (key === 40 && d !== "UP") {
+            } else if (key === 40) {
                 d = "DOWN";
             }
         };
@@ -58,7 +58,7 @@ class App extends Component {
         const collision = (head, array) => {
             for (let i = 0; i < array.length; i++) {
                 if (head.x === array[i].x && head.y === array[i].y) {
-                    return true;
+                    return false;
                 }
             }
 
@@ -135,25 +135,30 @@ class App extends Component {
     };
 
     render() {
-        return (
-            <div className="App">
-                <h1 className="score">Score: {this.state.score}</h1>
-                {!this.state.isLoaded ? <div className="overlay" /> : null}
-                {this.state.collided ? (
-                    <div className="menu">
-                        <button
-                            className="btnPlayAgain"
-                            onClick={this.handleClick}
-                        >
-                            Play Again
-                        </button>
-                    </div>
-                ) : null}
-                <canvas id="snake-game" ref="canvas" width={480} height={480} />
-            </div>
-            
-        );
-    }
+        return ( <
+                div className = "App" >
+                <
+                h1 className = "score" > Score: { this.state.score } < /h1> {!this.state.isLoaded ? < div className = "overlay" / >: null
+            } {
+                this.state.collided ? ( <
+                    div className = "menu" >
+                    <
+                    button className = "btnPlayAgain"
+                    onClick = { this.handleClick } >
+                    Play Again <
+                    /button> < /
+                    div >
+                ) : null
+            } <
+            canvas id = "snake-game"
+        ref = "canvas"
+        width = { 480 }
+        height = { 480 }
+        /> < /
+        div >
+
+    );
+}
 }
 
 export default App;
